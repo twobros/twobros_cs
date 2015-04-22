@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="codeSplitter">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  
+  <body>
+    <header>
+      <h1 align="center">Costsplitter</h1>
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <ul class="nav navbar-nav nav-tabs" nav-menu="active">
+            <li role="presentation" ng-class="{ active: isActive('/projects')}"> <a href="#/projects">Projects</a></li>
+            <li role="presentation" ng-class="{ active: isActive('/add')}"><a href="#/add">Add</a></li>
+            <li role="presentation" ng-class="{ active: isActive('/contacts')}"><a href="#/contacts">Contacts</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <div ng-view>Hej</div>  
+    </div>
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  </body>
+</html>
